@@ -226,13 +226,13 @@ namespace DST__Dükkan_Stok_Takip_
                 HardDrive hd = new HardDrive();  // User Defined Class
                 hd.Model = wmi_HD["Model"].ToString();  //Model Number
                 hd.Type = wmi_HD["InterfaceType"].ToString();  //Interface Type
-                hd.SerialNo = wmi_HD["SerialNumber"].ToString(); // Serial Number
+                hd.SerialNo = "Yok";//wmi_HD["SerialNumber"].ToString(); // Serial Number
                 hardDriveDetails.Add(hd);
                 HDDModel = "Model : " + hd.Model;
                 HDDTip = " Type : " + hd.Type;
                 HDDSerial = "HDD Serial Number : " + hd.SerialNo;
             }
-            Settings.HesapAyarları.Default.HDD_NO = HDDSerial;
+            Settings.HesapAyarları.Default.HDD_NO = "Yok";//HDDSerial;
             Settings.HesapAyarları.Default.Save();
         }
     }

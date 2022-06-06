@@ -356,7 +356,7 @@ namespace DST__Dükkan_Stok_Takip_
                     HardDrive hd = new HardDrive();  // User Defined Class
                     hd.Model = wmi_HD["Model"].ToString();  //Model Number
                     hd.Type = wmi_HD["InterfaceType"].ToString();  //Interface Type
-                    hd.SerialNo = wmi_HD["SerialNumber"].ToString(); // Serial Number
+                    hd.SerialNo = "Yok"; //wmi_HD["SerialNumber"].ToString(); // Serial Number
                     hardDriveDetails.Add(hd);
                     HDDModel = "Model : " + hd.Model;
                     HDDTip = " Type : " + hd.Type;
@@ -1115,9 +1115,13 @@ namespace DST__Dükkan_Stok_Takip_
         {
             btncihaztakip.BackgroundImage = Image.FromFile("images/cihazekle_Sec.png");
         }
-
+        bool durum = false;
         private void tmrlisanskontrol_Tick(object sender, EventArgs e)
         {
+            if (durum==true)
+            {
+                tmrlisanskontrol.Enabled = false;
+            }
             if (Settings.HesapAyarları.Default.LISANS_TURU=="")
             {
                 frmacilislisansgirmeekrani frmacilislisansgirmeekrani = new frmacilislisansgirmeekrani();
@@ -1135,13 +1139,13 @@ namespace DST__Dükkan_Stok_Takip_
                     HardDrive hd = new HardDrive();  // User Defined Class
                     hd.Model = wmi_HD["Model"].ToString();  //Model Number
                     hd.Type = wmi_HD["InterfaceType"].ToString();  //Interface Type
-                    hd.SerialNo = wmi_HD["SerialNumber"].ToString(); // Serial Number
+                    hd.SerialNo = "Yok";//wmi_HD["SerialNumber"].ToString(); // Serial Number
                     hardDriveDetails.Add(hd);
                     HDDModel = "Model : " + hd.Model;
                     HDDTip = " Type : " + hd.Type;
                     HDDSerial = "HDD Serial Number : " + hd.SerialNo;
                 }
-                if (Settings.HesapAyarları.Default.HDD_NO == HDDSerial)
+                if (Settings.HesapAyarları.Default.LISANS_TURU != "")
                 {
                     this.Visible = true;
                     try
@@ -1165,8 +1169,11 @@ namespace DST__Dükkan_Stok_Takip_
                         mail.IsBodyHtml = true;
                         smtp.Send(mail);
                         mail.Dispose();
+                        durum = true;
+                        tmrlisanskontrol.Interval = 3600000;
                         MessageBox.Show("Hoş Geldiniz", "DST", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                     tmrlisanskontrol.Enabled = false;
                     }
                     catch (Exception)
                     {
