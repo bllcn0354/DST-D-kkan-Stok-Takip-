@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62772390-9618-4B4A-BEA5-F7E307F8DA54}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DST__Dükkan_Stok_Takip_</RootNamespace>
+    <AssemblyName>DST %28Dükkan Stok Takip%29</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DST__Dükkan_Stok_Takip_.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>DST_İcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DST_DataDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DST_DataDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmacilisekrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmacilisekrani.Designer.cs">
+      <DependentUpon>frmacilisekrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmacilislisansgirmeekrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmacilislisansgirmeekrani.Designer.cs">
+      <DependentUpon>frmacilislisansgirmeekrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmarayuz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmarayuz.Designer.cs">
+      <DependentUpon>frmarayuz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmanasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmanasayfa.Designer.cs">
+      <DependentUpon>frmanasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmayarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmayarlar.Designer.cs">
+      <DependentUpon>frmayarlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmayarlar_altbolum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmayarlar_altbolum.Designer.cs">
+      <DependentUpon>frmayarlar_altbolum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmayarlar_GenelAyarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmayarlar_GenelAyarlar.Designer.cs">
+      <DependentUpon>frmayarlar_GenelAyarlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmayarlar_Yedekleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmayarlar_Yedekleme.Designer.cs">
+      <DependentUpon>frmayarlar_Yedekleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmcihazekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmcihazekle.Designer.cs">
+      <DependentUpon>frmcihazekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmfatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmfatura.Designer.cs">
+      <DependentUpon>frmfatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmfiyatbelirle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmfiyatbelirle.Designer.cs">
+      <DependentUpon>frmfiyatbelirle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmayarlar_muhasebeayarlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmayarlar_muhasebeayarlari.Designer.cs">
+      <DependentUpon>frmayarlar_muhasebeayarlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmhesap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmhesap.Designer.cs">
+      <DependentUpon>frmhesap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmmusterigoruntule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmusterigoruntule.Designer.cs">
+      <DependentUpon>frmmusterigoruntule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmpersonelekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmpersonelekle.Designer.cs">
+      <DependentUpon>frmpersonelekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmpersonelislemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmpersonelislemleri.Designer.cs">
+      <DependentUpon>frmpersonelislemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmraporlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmraporlar.Designer.cs">
+      <DependentUpon>frmraporlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsatisislemigoruntule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsatisislemigoruntule.Designer.cs">
+      <DependentUpon>frmsatisislemigoruntule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsatisislemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsatisislemleri.Designer.cs">
+      <DependentUpon>frmsatisislemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsatismusteribilgisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsatismusteribilgisi.Designer.cs">
+      <DependentUpon>frmsatismusteribilgisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsaturunbilgisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsaturunbilgisi.Designer.cs">
+      <DependentUpon>frmsaturunbilgisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmstokEnvanter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmstokEnvanter.Designer.cs">
+      <DependentUpon>frmstokEnvanter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmstokislemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmstokislemleri.Designer.cs">
+      <DependentUpon>frmstokislemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmstokislemlerimevcuturunekleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmstokislemlerimevcuturunekleme.Designer.cs">
+      <DependentUpon>frmstokislemlerimevcuturunekleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmstokislemleriurunekleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmstokislemleriurunekleme.Designer.cs">
+      <DependentUpon>frmstokislemleriurunekleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmstokislemleriurunsilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmstokislemleriurunsilme.Designer.cs">
+      <DependentUpon>frmstokislemleriurunsilme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmstokislemleriurunguncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmstokislemleriurunguncelle.Designer.cs">
+      <DependentUpon>frmstokislemleriurunguncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmurungoruntule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmurungoruntule.Designer.cs">
+      <DependentUpon>frmurungoruntule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mailmessage.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\altbolumayarlari.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>altbolumayarlari.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\GenelAyarlar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>GenelAyarlar.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\HesapAyarları.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>HesapAyarları.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\MuhasebeAyarlari.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>MuhasebeAyarlari.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\YedeklemeAyarlari.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>YedeklemeAyarlari.settings</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmacilisekrani.resx">
+      <DependentUpon>frmacilisekrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmacilislisansgirmeekrani.resx">
+      <DependentUpon>frmacilislisansgirmeekrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmarayuz.resx">
+      <DependentUpon>frmarayuz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmanasayfa.resx">
+      <DependentUpon>frmanasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmayarlar.resx">
+      <DependentUpon>frmayarlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmayarlar_altbolum.resx">
+      <DependentUpon>frmayarlar_altbolum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmayarlar_GenelAyarlar.resx">
+      <DependentUpon>frmayarlar_GenelAyarlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmayarlar_Yedekleme.resx">
+      <DependentUpon>frmayarlar_Yedekleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmcihazekle.resx">
+      <DependentUpon>frmcihazekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmfatura.resx">
+      <DependentUpon>frmfatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmfiyatbelirle.resx">
+      <DependentUpon>frmfiyatbelirle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmayarlar_muhasebeayarlari.resx">
+      <DependentUpon>frmayarlar_muhasebeayarlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmhesap.resx">
+      <DependentUpon>frmhesap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmmusterigoruntule.resx">
+      <DependentUpon>frmmusterigoruntule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmpersonelekle.resx">
+      <DependentUpon>frmpersonelekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmpersonelislemleri.resx">
+      <DependentUpon>frmpersonelislemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmraporlar.resx">
+      <DependentUpon>frmraporlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsatisislemigoruntule.resx">
+      <DependentUpon>frmsatisislemigoruntule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsatisislemleri.resx">
+      <DependentUpon>frmsatisislemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsatismusteribilgisi.resx">
+      <DependentUpon>frmsatismusteribilgisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsaturunbilgisi.resx">
+      <DependentUpon>frmsaturunbilgisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmstokEnvanter.resx">
+      <DependentUpon>frmstokEnvanter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmstokislemleri.resx">
+      <DependentUpon>frmstokislemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmstokislemlerimevcuturunekleme.resx">
+      <DependentUpon>frmstokislemlerimevcuturunekleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmstokislemleriurunekleme.resx">
+      <DependentUpon>frmstokislemleriurunekleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmstokislemleriurunsilme.resx">
+      <DependentUpon>frmstokislemleriurunsilme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmstokislemleriurunguncelle.resx">
+      <DependentUpon>frmstokislemleriurunguncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmurungoruntule.resx">
+      <DependentUpon>frmurungoruntule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DST_DataDataSet.xsc">
+      <DependentUpon>DST_DataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DST_DataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DST_DataDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DST_DataDataSet.xss">
+      <DependentUpon>DST_DataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Settings\altbolumayarlari.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>altbolumayarlari.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\GenelAyarlar.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>GenelAyarlar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\HesapAyarları.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>HesapAyarları.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\MuhasebeAyarlari.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MuhasebeAyarlari.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\YedeklemeAyarlari.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>YedeklemeAyarlari.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2861%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2853%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ustpanel.png" />
+    <None Include="bin\Debug\images\wallpaper\DST_Banner.png" />
+    <Content Include="DST_Data.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DST_İcon.ico" />
+    <None Include="Resources\B&amp;R Yazılım Logo%283%29.png" />
+    <None Include="Resources\SOFT %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 ve x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 </ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
